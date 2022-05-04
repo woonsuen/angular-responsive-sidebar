@@ -14,6 +14,7 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 export class AppComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
+  title: string = 'Love Hentai Hate Porn';
 
   constructor(private observer: BreakpointObserver, private router: Router) {}
 

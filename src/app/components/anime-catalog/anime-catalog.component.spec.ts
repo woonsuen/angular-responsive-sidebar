@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HelpComponent } from './help.component';
+import { AnimeCatalogComponent } from './anime-catalog.component';
 
-describe('HelpComponent', () => {
-  let component: HelpComponent;
-  let fixture: ComponentFixture<HelpComponent>;
+describe('AnimeCatalogComponent', () => {
+  let component: AnimeCatalogComponent;
+  let fixture: ComponentFixture<AnimeCatalogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HelpComponent ]
+      declarations: [ AnimeCatalogComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HelpComponent);
+    fixture = TestBed.createComponent(AnimeCatalogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

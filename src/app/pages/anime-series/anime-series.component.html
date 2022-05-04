@@ -1,0 +1,7 @@
+<h2>{{ animeName }}</h2>
+
+<app-anime-video
+  *ngFor="let episode of animeSeries.episodes"
+  [animeName]="episode.episodeName"
+  [urls]="episode.urls"
+></app-anime-video>

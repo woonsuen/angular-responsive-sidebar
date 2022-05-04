@@ -1,0 +1,31 @@
+<h2>{{ catalogName }}</h2>
+
+<div class="row">
+  <div *ngFor="let anime of animesToDisplay" class="col mt-3">
+    <a (click)="onClick(anime)">
+      <img
+        nzDisablePreview
+        nz-image
+        width="300px"
+        height="300px"
+        nzSrc="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+        alt=""
+      />
+
+      <h3>{{ anime.animeName }}</h3>
+    </a>
+  </div>
+</div>
+
+<nz-pagination
+  class="col mt-4"
+  (nzPageIndexChange)="onPageChange($event)"
+  [nzPageIndex]="1"
+  [nzTotal]="animes.length"
+  [nzPageSize]="animesPerPage"
+  [nzShowTotal]="rangeTemplate"
+></nz-pagination>
+<ng-template #totalTemplate let-total>Total {{ total }} items</ng-template>
+<ng-template #rangeTemplate let-range="range" let-total>
+  {{ range[0] }}-{{ range[1] }} of {{ total }} items
+</ng-template>

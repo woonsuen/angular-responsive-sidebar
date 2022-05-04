@@ -1,0 +1,14 @@
+<div class="mt-3">
+  <h3>{{ animeName }}</h3>
+
+  <nz-tabset nzType="card">
+    <nz-tab
+      *ngFor="let url of safeUrls; let i = index"
+      [nzTitle]="'Mirror ' + i"
+    >
+      <iframe [src]="url" frameborder="0" allowfullscreen></iframe>
+    </nz-tab>
+  </nz-tabset>
+
+  <nz-divider nzDashed></nz-divider>
+</div>
